@@ -54,7 +54,8 @@ private:
 
   static constexpr float SPEED_LINEAR = 0.3f;
   static constexpr float SPEED_ANGULAR = 0.3f;
-  static constexpr float OBSTACLE_DISTANCE = 1.0f;
+  static constexpr float OBSTACLE_DISTANCE = 0.1f;
+  static constexpr float SIDE_DISTANCE = 0.5f;
 
   rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr scan_sub_;
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr vel_pub_;

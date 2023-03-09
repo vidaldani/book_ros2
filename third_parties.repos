@@ -47,3 +47,7 @@ repositories:
     type: git
     url: https://github.com/BehaviorTree/Groot.git
     version: master
+  ThirdParty/play_motion2:
+    type: git
+    url: https://github.com/pal-robotics/play_motion2.git
+    version: humble-devel
