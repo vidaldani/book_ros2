@@ -59,9 +59,9 @@ ObstacleMonitorNode::control_cycle()
   double z = robot2obstacle.transform.translation.z;
   double theta = atan2(y, x);
 
-  RCLCPP_INFO(
+  /*RCLCPP_INFO(
     get_logger(), "Obstacle detected at (%lf m, %lf m, , %lf m) = %lf rads",
-    x, y, z, theta);
+    x, y, z, theta);*/
 
   visualization_msgs::msg::Marker obstacle_arrow;
   obstacle_arrow.header.frame_id = "base_footprint";
@@ -80,8 +80,10 @@ ObstacleMonitorNode::control_cycle()
   end.z = z;
   obstacle_arrow.points = {start, end};
 
-  obstacle_arrow.color.r = 1.0;
-  obstacle_arrow.color.g = 0.0;
+  double dist = sqrt(pow(x, 2) + pow(y, 2));       //calculating Euclidean distance
+
+  obstacle_arrow.color.r = 1.0/dist;
+  obstacle_arrow.color.g = dist;
   obstacle_arrow.color.b = 0.0;
   obstacle_arrow.color.a = 1.0;
 

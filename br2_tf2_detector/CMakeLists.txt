@@ -24,6 +24,7 @@ set(dependencies
 include_directories(include)
 
 add_library(${PROJECT_NAME} SHARED
+  src/br2_tf2_detector/DisplacementMonitorNode.cpp
   src/br2_tf2_detector/ObstacleDetectorNode.cpp
   src/br2_tf2_detector/ObstacleMonitorNode.cpp
   src/br2_tf2_detector/ObstacleDetectorImprovedNode.cpp
