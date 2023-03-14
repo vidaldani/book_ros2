@@ -14,14 +14,14 @@
 
 #include <memory>
 
-#include "br2_tracking/ObjectDetector.hpp"
+#include "br2_tracking/MultipleObjectDetector.hpp"
 #include "rclcpp/rclcpp.hpp"
 
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
 
-  auto node_detector = std::make_shared<br2_tracking::ObjectDetector>();
+  auto node_detector = std::make_shared<br2_tracking::MultipleObjectDetector>();
 
   rclcpp::spin(node_detector);
 

@@ -34,6 +34,7 @@ include_directories(include)
 
 add_library(${PROJECT_NAME} SHARED
   src/br2_tracking/ObjectDetector.cpp
+  src/br2_tracking/MultipleObjectDetector.cpp
   src/br2_tracking/HeadController.cpp
   src/br2_tracking/PIDController.cpp
 )
